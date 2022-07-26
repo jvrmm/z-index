@@ -1,0 +1,35 @@
+/* With an absolute position, all divs occupying a full row all to themselves. */
+/* So, we will only see on screen the last div that we made, that's because of the HTML flow. */
+/* If divs doesn't have a position type (relative, absolute or fixed), then 'z-index' property doesn't work at all. */
+div {
+  height: 100px;
+  width: 100px;
+  border: 1px solid;
+  position: absolute;
+}
+
+/* 'z-index' change the div position in the HTML. So, "z-index: 0" gives the original position that have in the HTML to the div. */
+/* As the value increases positively in the property 'z-index', it shows up the div as first. */
+.red {
+  width: 100%;
+  background-color: red;
+  z-index: -1;
+}
+
+/* But we could move these divs (yellow and blue), to show them and see their position. */
+.yellow {
+  width: 100%;
+  background-color: yellow;
+  left: 0;
+  top: 40px;
+  z-index: 0;
+}
+
+/* A negative value of 'z-index', leaves the div behind the others. */
+.blue {
+  width: 100%;
+  background-color: blue;
+  left: 0;
+  top: 80px;
+  z-index: 1;
+}
